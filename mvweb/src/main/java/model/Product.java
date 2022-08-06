@@ -1,16 +1,20 @@
 package model;
 
 public class Product {
-	  private String code;
+	    //This fileds does not math to db classicmodel tabel products
+	    private String code;
 	    private String price;
 	    private int quantity;
-	    private String description; 
+	    private String description;
 	    
-	    
-		public Product() {
-			
+		public Product() {		
 		}
-		
+		public Product(String code, String price, int quantity, String description) {			
+			this.code = code;
+			this.price = price;
+			this.quantity = quantity;
+			this.description = description;
+		}
 		public String getCode() {
 			return code;
 		}
@@ -40,12 +44,6 @@ public class Product {
 			return "Product [code=" + code + ", price=" + price + ", quantity=" + quantity + ", description="
 					+ description + "]";
 		}
-		public Product(String code, String price, int quantity, String description) {
-			super();
-			this.code = code;
-			this.price = price;
-			this.quantity = quantity;
-			this.description = description;
-		}
+	    
 
 }
